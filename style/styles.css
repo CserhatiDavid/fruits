@@ -13,22 +13,69 @@ body{
     background: #ddd;
     font-family: 'Roboto', sans-serif;
 }
+img{
+    width: 100%;
+}
 #container{
     max-width: 1000px;
     margin: 0 auto;
+    width: 95%;
 }
 #header{
     background: #86b604;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
-#nav #hambi-gomb{}
+#nav #hambi-gomb{
+    display: none;
+}
 #hamburger{
     width: 50px;
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 3px;
-    padding: 10px;
+    padding: 7px;
+    display: block;
+    float: right;
+    margin: 7px 7px 0 0;
 }
 #hamburger span{
     background: white;
     height: 5px;
     margin-bottom: 5px;
+    display: block;
+    border-radius: 3px;
+}
+#hamubrger span:last-child{
+    margin-bottom: 0;
+}
+nav::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+#nav ul li{
+   border-bottom: 5px solid rgba(255, 255, 255, .3);
+}
+#nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem  1rem;
+    display: inline-block;
+}
+#nav ul li:first-child{
+    padding: 1.5rem 1rem;
+    color: rgba(255, 255, 255, .3);
+}
+#nav ul li:not(:first-child){
+    display: none;
+}
+#hambi-gomb:checked ~ ul li:not(:first-child){
+    display: block;
+}
+#main h1{
+    font-weight: 100;
+    font-size: 5rem;
+    margin: 5rem 0 2rem 0;
 }
