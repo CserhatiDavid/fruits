@@ -50,7 +50,7 @@ img{
 #hamubrger span:last-child{
     margin-bottom: 0;
 }
-nav::after{
+nav::after {
     content: "";
     clear: both;
     display: table;
@@ -119,4 +119,16 @@ nav::after{
     text-decoration: none;
     border-radius: 5px;
     background: #86b604;
+}
+
+@media(min-width:768px){
+    #main>img{
+        float: right;
+        width: 40%;
+    }
+    #main::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 }
